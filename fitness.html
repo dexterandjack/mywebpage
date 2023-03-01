@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/stylesheet_calculator.css">
+    <script src="src/script_calculator.js"></script>
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator</h1>
+        <div>
+            <form class="form">
+                <label for="Height">Height:</label>
+                <input type="number" name="Height" placeholder="0 cm" id="height">
+                <label for="Weight">Weight:</label>
+                <input type="number" name="Weight" placeholder="0 kg" id="weight">
+                <label for="Waist">Waist:</label>
+                <input type="number" name="Waist" placeholder="0 cm" id="waist">
+                <label for="Neck">Neck:</label>
+                <input type="number" name="Neck" placeholder="0 cm" id="neck">
+            </form>
+                <form class="form2">
+                    <label for="Activity">Activity Level:</label>
+                        <select name="Activity" id="Activity">
+                            <option>1-3 hours weekly</option>
+                            <option>4-6 hours weekly</option>
+                            <option>>6 hours weekly</option>
+                        </select>
+                    <label for="Diet">Choose your Goal:</label>
+                        <select name="Diet" id="Diet">
+                            <option>Lose Weight</option>
+                            <option>Maintain Weight</option>
+                            <option>Gain Weight</option>
+                        </select>
+                </form>
+
+            <button class="button" onclick="calculate()">Calculate</button>
+        </div>
+    </div>
+
+    <div class="results">
+        <div class="container2">
+            <header>
+                <h1>Your Results</h1>
+            </header>
+            
+            <main>
+                <section class="maininfo">
+                    <div>
+                        <h2>Personal info</h2>
+                        <p>Height: <span id="heightR"></span></p>
+                        <p>Weight: <span id="weightR"></span></p>
+                        <p>Neck: <span id="neckR"></span></p>
+                        <p>Waist: <span id="waistR"></span></p>
+                    </div>
+                    <div>
+                        <h2 id="DietName">Diet according to goal</h2>
+                        <p>Activity Level: <span id="ActivityLvl"></span></p>
+                        <p>Protein: <span id="Protein"></span></p>
+                        <p>Carbs: <span id="Carb"></span></p>
+                        <p>Fats: <span id="Fat"></span></p>
+                    </div>
+                </section>
+                <section class="calorieinfo">
+                    <div>
+                        <h2>BMR</h2>
+                        <p id="BMR"></p>
+                    </div>
+                    <div>
+                        <h2>TDEE</h2>
+                        <p id="TDEE"></p>
+                    </div>
+                    <div>
+                        <h2>Bodyfat</h2>
+                        <p id="BodyFatPercentage"></p>
+                        <p id="BodyFatKG"></p>
+                    </div>  
+                </section>
+                <section class="calorieinfo">
+                    <div>
+                        <h2>BMI</h2>
+                        <p id="BMI"></p>
+                    </div>
+                    <div>
+                        <h2>FFMI</h2>
+                        <p id="FFMI"></p>
+                    </div> 
+                </section>
+            </main>
+
+            <footer> 
+                <p>*Note that results are not 100% accurate*</p>
+            </footer>
+        </div>
+        <div class="container3">
+            <table class="GeneratedTable">
+            <thead>
+                <tr>
+                    <th>BMI</th>
+                    <th>BMI range - kg/m2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tb1tr1">
+                    <td>< 16</td>
+                    <td>Severe Thinness</td>
+                </tr>
+                <tr class="tb1tr2">
+                    <td>16 - 17</td>
+                    <td>Moderate Thinness</td>
+                </tr>
+                <tr class="tb1tr3">
+                    <td>17 - 18.5</td>
+                    <td>Mild Thinness</td> 
+                </tr>
+                <tr class="tb1tr4">
+                    <td>18.5 - 25</td>
+                    <td>Normal</td>
+                </tr>
+                <tr class="tb1tr5">
+                    <td>25 - 30</td>
+                    <td>Overweight</td>
+                </tr>
+                <tr class="tb1tr6">
+                    <td>30 - 35</td>
+                    <td>Obese Class I</td>
+                </tr>
+                <tr class="tb1tr7">
+                    <td>35 - 40</td>
+                    <td>Obese Class II</td>
+                </tr>
+                <tr class="tb1tr8"> 
+                    <td>> 40</td>
+                    <td>Obese Class III</td>
+                </tr>
+            </tbody>
+            </table>
+            
+            <table class="GeneratedTable">
+            <thead>
+                <tr>
+                    <th>FFMI</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tb2tr1">
+                    <td>< 18</td>
+                    <td>Skinny</td>
+                </tr>
+                <tr class="tb2tr2">
+                    <td>18-20</td>
+                    <td>Average</td>
+                </tr>
+                <tr class="tb2tr3">
+                    <td>20-21</td>
+                    <td>Athletic</td>
+                </tr>
+                <tr class="tb2tr4">
+                    <td>21-23</td>
+                    <td>Very Well Built</td>
+                </tr>
+                <tr class="tb2tr5">
+                    <td>23-25</td>
+                    <td>Extremely Muscular</td>
+                </tr>
+                <tr class="tb2tr6">
+                    <td>>25</td>
+                    <td>Unlikely</td>
+                </tr>
+            </tbody>
+            </table>
+
+            <table class="GeneratedTable">
+            <thead>
+                <tr>
+                    <th>Body fat %</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tb3tr1">
+                    <td>2-5%</td>
+                    <td>Essential fat</td>
+                </tr>
+                <tr class="tb3tr2">
+                    <td>6-13%</td>
+                    <td>Athletes</td>
+                </tr>
+                <tr class="tb3tr3">
+                    <td>14-17%</td>
+                    <td>Fitness</td>  
+                </tr>
+                <tr class="tb3tr4">
+                    <td>18-24%</td>
+                    <td>Average</td>
+                </tr>
+                <tr class="tb3tr5">
+                    <td>25%+</td>
+                    <td>Obese</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

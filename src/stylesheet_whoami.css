@@ -1,0 +1,144 @@
+body {
+    background-color: black;
+    color: gray;
+}
+img {
+    width: 300px;
+    height: 300px;
+}
+.quote {
+    display: flex;
+    justify-content: center;
+}
+.quote img{
+    width: 250px;
+    height: 250px;
+}
+.quote h1{
+    font-size: 75px;
+    margin-top: 85px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.quote h2 {
+    margin-top: 85px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.quote h3 {
+    margin-top: 85px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+header{
+    margin-bottom: 50px;
+}
+header p {
+    font-size: 25px;
+    text-align: center;
+}
+.arrow {
+    display: block;
+    width: 180px;
+    height: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+.flip {
+    transform: scaleX(-1);
+}
+main {
+    padding-top: 200px;
+    display: none;
+}
+main p {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 25px;
+}
+main img {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.zyzz {
+    border-radius: 35%;
+}
+.cristo {
+    border-radius: 35%;
+    width: 500px;
+}
+.jack{
+    height: 500px;
+}
+.captain {
+    height: 500px;
+}
+.fuckerman {
+    height: 400px;
+}
+.flex_left {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 200px;
+}
+.flex_right {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 200px;
+}
+.solo_h1{
+    margin-top: 150px;
+    text-align: center;
+}
+nav {
+    display: none;
+}
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin-bottom: 150px;
+}
+nav button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    font-size: 25px;
+}
+nav button:hover{
+    color: white;
+    text-decoration: underline;
+}
+article {
+    display: none;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 150px;
+}
+article h3{
+    text-align: center;
+}
+article p{
+    margin-bottom: 50px;
+}
+footer{
+    display: none;
+}
+footer h3{
+    text-align: center;
+}
+video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
